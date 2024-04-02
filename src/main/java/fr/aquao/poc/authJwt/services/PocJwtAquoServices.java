@@ -14,13 +14,13 @@ import java.util.regex.Matcher;
 @Service
 public class PocJwtAquoServices {
 
-  @Value("${jwt_issuer}")
+  @Value("${application.jwt.issuer}")
   private String jwtIssuer;
 
-  @Value("${jwt_subject}")
+  @Value("${application.jwt.subject}")
   private String jwtSubject;
 
-  @Value("${jwt_key}")
+  @Value("${application.jwt.secret}")
   private String jwtKey;
 
   public String generateJwt() {

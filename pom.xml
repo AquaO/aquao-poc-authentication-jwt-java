@@ -14,31 +14,36 @@
 	<packaging>war</packaging>
 	<name>poc-jwt-aquao</name>
 	<description>Demo project for Spring Boot</description>
+	<properties>
+		<java.version>17</java.version>
+	</properties>
 	<profiles>
 		<profile>
 				<id>dev</id>
 				<properties>
-						<activatedProperties>dev</activatedProperties>
+					<application.host>%**%</application.host>
+					<application.jwt.issuer>%**%</application.jwt.issuer>
+					<application.jwt.subject>%**%</application.jwt.subject>
+					<application.jwt.secret>%**%</application.jwt.secret>
+					<application.session.name>%**%</application.session.name>
+					<activatedProperties>dev</activatedProperties>
 				</properties>
 				<activation>
-						<activeByDefault>true</activeByDefault>
+					<activeByDefault>true</activeByDefault>
 				</activation>
 		</profile>
 		<profile>
 				<id>prod</id>
 				<properties>
-						<activatedProperties>prod</activatedProperties>
+					<application.host></application.host>
+					<application.jwt.issuer></application.jwt.issuer>
+					<application.jwt.subject></application.jwt.subject>
+					<application.jwt.secret></application.jwt.secret>
+					<application.session.name></application.session.name>
+					<activatedProperties>prod</activatedProperties>
 				</properties>
 		</profile>
-	</profiles>
-	<properties>
-		<java.version>17</java.version>
-		<application.host></application.host>
-		<application.jwt.issuer></application.jwt.issuer>
-		<application.jwt.subject></application.jwt.subject>
-		<application.jwt.secret></application.jwt.secret>
-		<application.jwt.sessionName></application.jwt.sessionName>
-	</properties>
+</profiles>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
@@ -94,7 +99,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 			</plugin>
-			<plugin>
+						<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-resources-plugin</artifactId>
 				<configuration>

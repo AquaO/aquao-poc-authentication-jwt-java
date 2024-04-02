@@ -7,13 +7,13 @@ This a Java/Spring Proof Of Concept to demonstrate how to authenticate against A
 
 ## How to start
 
-Edit application.properties file and replace %**% with the correct values
+Edit pom.xml file and replace %**% with the correct values
 
-* HOST
-* JWT ISSUER
-* JWT SUBJECT
-* JWT KEY
-* SESSION NAME
+* application.host
+* application.jwt.issuer
+* application.jwt.subject
+* application.jwt.secret
+* application.session.name
 
 ### Prerequisites
 
@@ -22,14 +22,30 @@ Edit application.properties file and replace %**% with the correct values
 
 ### Install
 
+Development environment
+
 ```bash
-mvn clean install
+mvn clean install -Pdev
+```
+
+Production environment
+
+```bash
+mvn clean install -Pprod
 ```
 
 ## Start
 
+Development environment
+
 ```bash
 mvn spring-boot:run
+```
+
+Production environment
+
+```bash
+mvn spring-boot:run -Pprod
 ```
 
 ## Authors
