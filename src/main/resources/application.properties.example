@@ -1,6 +1,0 @@
-spring.application.name=poc-jwt-aquao
-host=host
-jwt_issuer=issuer
-jwt_subject=subject
-jwt_key=key
-session_name=session_name

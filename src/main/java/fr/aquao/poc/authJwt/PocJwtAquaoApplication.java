@@ -9,8 +9,13 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.boot.CommandLineRunner;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.PropertySource;
 
 import fr.aquao.poc.authJwt.services.PocJwtAquoServices;
+
+@Configuration
+@PropertySource("classpath:application-${spring.profiles.active}.properties")
 
 @SpringBootApplication
 public class PocJwtAquaoApplication implements CommandLineRunner{

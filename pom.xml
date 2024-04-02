@@ -14,8 +14,30 @@
 	<packaging>war</packaging>
 	<name>poc-jwt-aquao</name>
 	<description>Demo project for Spring Boot</description>
+	<profiles>
+		<profile>
+				<id>dev</id>
+				<properties>
+						<activatedProperties>dev</activatedProperties>
+				</properties>
+				<activation>
+						<activeByDefault>true</activeByDefault>
+				</activation>
+		</profile>
+		<profile>
+				<id>prod</id>
+				<properties>
+						<activatedProperties>prod</activatedProperties>
+				</properties>
+		</profile>
+	</profiles>
 	<properties>
 		<java.version>17</java.version>
+		<application.host></application.host>
+		<application.jwt.issuer></application.jwt.issuer>
+		<application.jwt.subject></application.jwt.subject>
+		<application.jwt.secret></application.jwt.secret>
+		<application.jwt.sessionName></application.jwt.sessionName>
 	</properties>
 	<dependencies>
 		<dependency>
@@ -71,6 +93,17 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-resources-plugin</artifactId>
+				<configuration>
+					<delimiters>
+						<delimiter>@</delimiter>
+						<delimiter>${*}</delimiter>
+					</delimiters>
+					<useDefaultDelimiters>false</useDefaultDelimiters>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
