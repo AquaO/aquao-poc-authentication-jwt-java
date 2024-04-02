@@ -1,4 +1,4 @@
-package com.jwt.pocjwtaquao.services;
+package fr.aquao.poc.authJwt.services;
 
 import org.springframework.http.HttpHeaders;
 import io.jsonwebtoken.Jwts;
@@ -28,7 +28,7 @@ public class PocJwtAquoServices {
       Key key = new javax.crypto.spec.SecretKeySpec(decodedKey, "HmacSHA256");
 
       long nowMillis = System.currentTimeMillis();
-      long expirationTime = nowMillis + 1000 * 60 * 30; // 1 hour
+      long expirationTime = nowMillis + 1000 * 60 * 30;
 
       return Jwts.builder()
               .setHeaderParam("alg", "HS256")

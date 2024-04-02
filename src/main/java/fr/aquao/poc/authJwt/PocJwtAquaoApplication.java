@@ -1,4 +1,4 @@
-package com.jwt.pocjwtaquao;
+package fr.aquao.poc.authJwt;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -9,7 +9,8 @@ import org.springframework.web.client.RestTemplate;
 import org.springframework.boot.CommandLineRunner;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.jwt.pocjwtaquao.services.PocJwtAquoServices;
+
+import fr.aquao.poc.authJwt.services.PocJwtAquoServices;
 
 @SpringBootApplication
 public class PocJwtAquaoApplication implements CommandLineRunner{

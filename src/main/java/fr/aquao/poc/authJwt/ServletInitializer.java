@@ -1,4 +1,4 @@
-package com.jwt.pocjwtaquao;
+package fr.aquao.poc.authJwt;
 
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
