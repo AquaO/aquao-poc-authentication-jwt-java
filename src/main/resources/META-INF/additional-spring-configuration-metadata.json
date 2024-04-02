@@ -1,0 +1,27 @@
+{"properties": [
+  {
+    "name": "host",
+    "type": "java.lang.String",
+    "description": "A description for 'host'"
+  },
+  {
+    "name": "jwt_issuer",
+    "type": "java.lang.String",
+    "description": "A description for 'jwt_issuer'"
+  },
+  {
+    "name": "jwt_subject",
+    "type": "java.lang.String",
+    "description": "A description for 'jwt_subject'"
+  },
+  {
+    "name": "jwt_key",
+    "type": "java.lang.String",
+    "description": "A description for 'jwt_key'"
+  },
+  {
+    "name": "session_name",
+    "type": "java.lang.String",
+    "description": "A description for 'session_name'"
+  }
+]}
